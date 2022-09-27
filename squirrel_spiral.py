@@ -1,3 +1,5 @@
+# 4kyu 
+
 # Since the weather was good, some students decided to go for a walk 
 # in the park after the first lectures of the new academic year. 
 # There they saw a squirrel, which climbed a tree in a spiral at a 
