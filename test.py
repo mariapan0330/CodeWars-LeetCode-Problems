@@ -4,12 +4,20 @@ my_dict = {
     3: (3,3)
 }
 
-if (1,1) in my_dict.values():
-    my_dict.pop((2,2))
-print(my_dict)
+# if (1,1) in my_dict.values():
+    # my_dict.pop((2,2))
+# print(my_dict)
 
 
 x = 3
 y = 2
 solution = eval('{}-(2/3)*{}'.format(y,x))
 print(solution)
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+abc = 'abc'
+print(alphabet[3])
+print('===')
+
+for i, let in enumerate(alphabet): 
+    print(i, alphabet[i % len(abc)])
