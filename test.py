@@ -43,3 +43,14 @@ for x in mys:
 print(myd)
 myd.pop('a')
 print(myd)
+
+import math
+print(eval("math.factorial(3)"))
+
+mys = 'abcd'
+lett = mys[-1]
+print(mys)
+print(lett)
+
+mys = '1+23'
+print(eval(mys[:-1]))
