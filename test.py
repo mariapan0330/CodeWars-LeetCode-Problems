@@ -54,3 +54,20 @@ print(lett)
 
 mys = '1+23'
 print(eval(mys[:-1]))
+
+mytest = None
+print(type(mytest))
+if mytest is not None:
+    print('not none')
+else:
+    print('none')
+
+num = 3
+mys = f''
+mys += "{}{}+2"
+mycount = 2
+# print(eval(mys.format([f'{num}' for x in range(mycount+1)])))
+
+mys = '?abcda?'
+mys = mys.replace('?','8')
+print(mys)
