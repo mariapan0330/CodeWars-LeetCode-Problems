@@ -30,6 +30,16 @@ def largest_sub_array(nums):
     return total
 
 
+def largest_sub_array(nums):
+    largest_total = float('-inf')
+    curr_total = 0
+    for x in nums:
+        if x > largest_total:
+            largest_total = x
+        curr_total += x
+    return largest_total
+
+
 nums = [-2,1,-3,4,-1,2,1,-5,4]
 nums2 = [5,4,-1,7,8]
 
