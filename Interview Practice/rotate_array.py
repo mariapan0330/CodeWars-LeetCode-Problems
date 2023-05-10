@@ -16,13 +16,19 @@ Do not return anything, modify nums in-place instead.
 # or try using list slices? [:-k]
 
 def rotate(nums, k):
-    nums = nums[-k:] + nums[:-k]
+    end = 0
+    for x in range(0,k):  
+        end_num = nums.pop()
+        nums.insert(0,end_num)
+        # nums = nums[-k:] + nums[:-k]
     return nums
 
 
 
 nums = [1,2,3,4,5,6,7]
 k = 3
+# nums = [1,2]
+# k = 3
 print(rotate(nums, k))
 
 print("--- TESTS ---")

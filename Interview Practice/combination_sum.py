@@ -8,7 +8,7 @@ sum to target. You may return the combinations in any order.
 # PLAN:
 # sort the numbers
 # starting at the beginning, explore all possible combinations (stop trying if sum > target)
-# at first item, recursively call
+# to do this, check the same number recursively until the sum > target, in which case return without marking it as a result
 
 def combination_sum(nums, target):
     
@@ -19,6 +19,7 @@ def combination_sum(nums, target):
     nums.sort()
     result = []
     def dfs(curr, idx, curr_sum):
+        print(curr, idx)
         if curr_sum > target:
             return
         if curr_sum == target:
