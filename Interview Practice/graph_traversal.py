@@ -41,10 +41,17 @@ def depth_print(graph, source): # source is the node you're starting the search 
     while stack:
         curr = stack.pop()
         print(curr)
-        for x in graph[curr]:
+        for x in graph[curr][::-1]:
             stack.append(x)
     return
 
-
+def depth_print_recursive(graph, curr):
+    print(curr)
+    for x in graph[curr]:
+        # base case is that the current node has no neighbors (then the recursion doesn't continue)
+        depth_print_recursive(graph, x)
+    return
 
 depth_print(graph, 'a')
+print("===")
+depth_print_recursive(graph, 'a')
