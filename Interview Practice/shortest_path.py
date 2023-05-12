@@ -5,6 +5,8 @@ return the shortest path between Start and End
   \    /
   5 - 4
 
+  6 - 7
+
 """
 
 edges = [
@@ -13,6 +15,8 @@ edges = [
     [4,5],
     [5,1],
     [3,4],
+    [6,7],
+    [7,6],
 ]
 
 def shortest_path(edges, start, end):
@@ -50,18 +54,16 @@ def shortest_path(edges, start, end):
     graph = make_graph(edges)
     q = [(start, 0)] # initialize queue with start node and length of current pattern
     curr = None
-    result = len(edges)
-    visited = set()
+    visited = {start}
     while len(q) > 0:
         curr, length = q.pop()
         visited.add(curr)
         if curr == end:
-            if length < result:
-                result = length
+            return length
         for node in graph[curr]:
             if node not in visited and node not in q:
                 q.insert(0, (node, length + 1))
-    return result
+    return -1
 
 
 
@@ -81,3 +83,4 @@ def make_graph(edges):
 print(shortest_path(edges, 1, 4))
 print(shortest_path(edges, 1, 3))
 print(shortest_path(edges, 1, 2))
+print(shortest_path(edges, 7, 5))
