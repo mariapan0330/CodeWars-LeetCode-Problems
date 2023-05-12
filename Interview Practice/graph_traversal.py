@@ -52,6 +52,26 @@ def depth_print_recursive(graph, curr):
         depth_print_recursive(graph, x)
     return
 
+print("depth")
 depth_print(graph, 'a')
-print("===")
+print("depth + recursive")
 depth_print_recursive(graph, 'a')
+
+def breadth_print(graph, source):
+    # queue method
+    # plan:
+    # queue initialized containing the source
+    # while there's stuff in the queue:
+        # curr node is the popped END of the queue
+        # print curr node
+        # curr node's neighbors are put into the FRONT of the queue
+    queue = [source]
+    curr = 0
+    while queue != []:
+        curr = queue.pop()
+        print(curr)
+        for node in graph[curr]:
+            queue.insert(0, node)
+
+print('breadth')
+breadth_print(graph, 'a')

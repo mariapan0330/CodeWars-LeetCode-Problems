@@ -6,7 +6,6 @@
 4. sliding window technique - left and right pointer to traverse a data structure
 5. recursion (often easier/cleaner than iteratively) ex: in-order traversal of a tree, fibonnaci, depth of a node in a binary tree
 6. inverting a binary tree (it's an easy problem; traverse a tree and swap values) AND reversing a linked list (overwriting pointers without losing them)
-
 7. suffix trees - powerful data structure that can contain dictionary objects (just learn this bc it can help in the interview)
 8. heaps - advanced data structure (useful bc there's a logarithmic time operation) helps find the smallest or largest values (helpful strategy, not a question)
 9. dynamic programming - solving a problem that's complex by solving a smaller and smaller version of the problem;
