@@ -11,13 +11,33 @@ items = [
 #         print(row_num, val)
 
 
+class Some_Number:
+    def __init__(self, num):
+        self.num = num
+
 def change_numbers():
-    num = 1
-    num = add_one(num)
+    my_set = {1,2,3}
+    add_to_set(my_set)
+    print(my_set)
+
+    my_list = [1,2,3]
+    add_to_list(my_list)
+    print(my_list)
+    
+    my_num = 1
+    add_one(my_num)
+    print(my_num)
+
+def add_to_set(my_set):
+    return my_set.add(4)
+
+def add_to_list(my_list):
+    return my_list.append(4)
+    
+def add_one(num):
+    num += 1
     return num
 
-def add_one(num):
-    return num + 1
 
 
-print(change_numbers())
+change_numbers()
