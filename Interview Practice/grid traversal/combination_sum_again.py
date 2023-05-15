@@ -14,23 +14,24 @@ def combination_sum(nums, target):
     """
     PLAN
     - sort the numbers
-    - dfs where the nodes are the numbers, explore the same number til sum is too big
-    - store both the current sum and the current sequence in the stack.
+    - go through each number
+        - dfs: nodes = possible numbers, explore the same number til sum is too big
+        - stack = current sum and the current sequence.
     """
     nums.sort()
     result = []
     for each in nums:
         stack = [(0, each, [each])] # index, sum, sequence
         while len(stack) > 0:
-            i, curr_sum, curr_seq = stack.pop()
+            idx, curr_sum, curr_seq = stack.pop()
             if curr_sum > target:
                 continue
             if curr_sum == target:
                 curr_seq.sort()
                 if curr_seq not in result:
                     result.append(curr_seq)
-            for num in nums:
-                stack.append((i+1, curr_sum + num, curr_seq + [num]))
+            for i in range(idx, len(nums)):
+                stack.append((i, curr_sum + nums[i], curr_seq + [nums[i]]))
     return result
 
 print(combination_sum(nums, 7))
