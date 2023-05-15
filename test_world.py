@@ -41,3 +41,12 @@ def add_one(num):
 
 
 change_numbers()
+
+my_l = [
+    [1,2,3],
+    [4,5,6]
+]
+my_l[0][1] = 'b'
+
+for x in my_l:
+    print(x)

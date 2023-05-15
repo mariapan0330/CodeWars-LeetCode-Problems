@@ -10,7 +10,7 @@ Assume the area outside the array is water.
 . . . 0 0 .
 . 0 . 0 0 .
 . . . . . .
-answer = 4
+answer = 4 because there are 4 distinct islands
 """
 
 
