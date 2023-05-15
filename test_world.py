@@ -50,3 +50,11 @@ my_l[0][1] = 'b'
 
 for x in my_l:
     print(x)
+
+
+mys = {(1,2,3), (2)}
+result = []
+print(mys)
+for s in mys:
+    result.append([x for x in s])
+print(result)
