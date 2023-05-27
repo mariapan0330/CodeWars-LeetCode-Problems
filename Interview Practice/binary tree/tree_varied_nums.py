@@ -1,17 +1,15 @@
-# following https://www.youtube.com/watch?v=fAAZixBzIAI
-
 class Node:
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
 
-a = Node('a')
-b = Node('b')
-c = Node('c')
-d = Node('d')
-e = Node('e')
-f = Node('f')
+a = Node(5)
+b = Node(11)
+c = Node(3)
+d = Node(4)
+e = Node(15)
+f = Node(12)
 
 a.left = b
 a.right = c
@@ -21,9 +19,9 @@ c.right = f
 
 """
 The above sets up a binary tree
-      a
-     / \
-    b   c
-   / \   \
-  d   e   f
+       5
+      / \
+    11   3
+   /  \   \
+  4   15   12
 """
