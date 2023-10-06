@@ -1,0 +1,6 @@
+- lots of CPU overhead
+- can be unnecciserily complex if poorly constructed
+- works well with recursive structures (e.g. trees/graphs) where you can focus on one node at a time
+
+
+following https://www.youtube.com/watch?v=IJDJ0kBx2LM
